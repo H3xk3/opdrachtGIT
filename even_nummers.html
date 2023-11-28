@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let getallen = [13, 23, 12, 45, 22, 48, 66, 100];
+     
+         
+         for (let i = 0; i < getallen.length; i++) {
+             if (getallen[i] % 2 === 0) {
+                 document.write(getallen[i] + " ");
+             }
+         }
+     </script>
+     <br>
+     <br>
+     <br>
+   
+    <br>
+    <br>
+    <br>
+
+    <script>
+       
+        let tekst = "Tel het aantal keer dat elke letter voorkomt in deze tekst";
+        
+        
+        let teller = new Array(26).fill(0);
+    
+        
+        for (let i = 0; i < tekst.length; i++) {
+            let charCode = tekst.toLowerCase().charCodeAt(i);
+            if (charCode >= 97 && charCode <= 122) {
+                
+                teller[charCode - 97]++;
+            }
+        }
+    
+        
+        document.write("Dit is de tekst '" + tekst + "'.<br>");
+        for (let j = 0; j < teller.length; j++) {
+            if (teller[j] > 0) {
+                let letter = String.fromCharCode(j + 97);
+                document.write("Letter " + letter + " komt " + teller[j] + " keer voor.<br>");
+            }
+        }
+    </script>
+</body>
+</html>
